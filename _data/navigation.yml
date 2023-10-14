@@ -1,12 +1,24 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  #   url: /about/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+
+sidebar-category:
+  - title: "Category"
+    children:
+      - title: "Python"
+        url: "/Python"
+      - title: "CV_Papers"
+        url:  "/CV_Papers"
+      - title: "Projects"
+        url:  "/Projects"
+  # - title: "etc"
+  #     - title: "잡담"
+  #       url: "/etc"
