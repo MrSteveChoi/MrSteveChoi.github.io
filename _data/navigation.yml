@@ -14,7 +14,7 @@ sidebar-category:
   - title: "Category"
     children:
       - title: "Python"
-        url: "/Python"
+        url: "/python"
       - title: "CV_Papers"
         url:  "/CV_Papers"
       - title: "Projects"
