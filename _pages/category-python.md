@@ -1,7 +1,7 @@
 ---
-title: "python"
+title: "Python"
 layout: archive
-permalink: /python
+permalink: /Python
 ---
 
 
