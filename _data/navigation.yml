@@ -1,5 +1,5 @@
 # main links
-main:
+# main:
   # - title: "About"
   #   url: /about/
   # - title: "Sample Posts"
@@ -9,16 +9,18 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 
+# <-- 기존 sidebar setting -->
+# sidebar-category:
+#   - title: "Category"
+#     children:
+#       - title: "Python"
+#         url: "/python"
+#       - title: "CV_Papers"
+#         url:  "/CV_Papers"
+#       - title: "Projects"
+#         url:  "/Projects"
 
-sidebar-category:
-  - title: "Category"
-    children:
-      - title: "Python"
-        url: "/python"
-      - title: "CV_Papers"
-        url:  "/CV_Papers"
-      - title: "Projects"
-        url:  "/Projects"
-  # - title: "etc"
-  #     - title: "잡담"
-  #       url: "/etc"
+#   - title: "etc"
+#     children:
+#       - title: "잡담"
+#         url: "/etc"

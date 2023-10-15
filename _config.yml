@@ -290,5 +290,7 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar: # add_part
-        nav: "sidebar-category" # add_part
+      mathjax: true
+      # sidebar: # add_part
+        # nav: "sidebar-category" # add_part
+      sidebar_main: true
