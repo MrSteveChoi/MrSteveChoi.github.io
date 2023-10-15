@@ -11,4 +11,10 @@ tock_label: "TOC-TEST"
 파이썬 카테고리 테스트 - python category
 왜 이렇게 오류가나냐...
 
+## inline으로 수식 쓰는 방법
+- `\\(`와 `\\)` 사이에 문법대로 수식을 쓴다.
 `원래 힘으로 돌아가려는 힘 벡터` = \\(\vec{f_{ij,spring}} = -k(\vert\vec{x_i} - \vec{x_j}\vert - l_0){\vec{x_i} - \vec{x_j}\over{\vert\vec{x_i} - \vec{x_j}\vert}} \\)
+
+## block으로 수식 쓰는 방법
+- `\\[`와 `\\]` 사이에 문법대로 수식을 쓴다.
+`원래 힘으로 돌아가려는 힘 벡터` = \\[\vec{f_{ij,spring}} = -k(\vert\vec{x_i} - \vec{x_j}\vert - l_0){\vec{x_i} - \vec{x_j}\over{\vert\vec{x_i} - \vec{x_j}\vert}} \\]
