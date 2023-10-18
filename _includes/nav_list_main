@@ -28,7 +28,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "CV_Papers" %}
-                        <li><a href="/CV_Papers" class="">CV_Papers review ({{category[1].size}})</a></li>
+                        <li><a href="/CV_Papers" class="">CV Papers review ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -45,7 +45,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "kaggle_UBC_OC" %}
-                        <li><a href="/kaggle_UBC_OC" class="">kaggle_UBC_OC ({{category[1].size}})</a></li>
+                        <li><a href="/kaggle_UBC_OC" class="">kaggle UBC OC ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
