@@ -5,6 +5,7 @@ categories:
 toc: true
 toc_sticky: true
 tock_label: "TOC-TEST"
+typora-root-url: ../
 ---
 
 파이썬 카테고리 테스트

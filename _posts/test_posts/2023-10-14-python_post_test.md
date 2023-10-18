@@ -5,6 +5,7 @@ categories:
 toc: true
 toc_sticky: true
 tock_label: "TOC-TEST"
+typora-root-url: ../
 ---
 
 # test_test
