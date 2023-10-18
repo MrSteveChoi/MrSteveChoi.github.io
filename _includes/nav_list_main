@@ -10,9 +10,10 @@
       <li>
             📂 <span style="font-family:'Cafe24Oneprettynight'; font-size: 8pt;">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
       </li>
+
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
-        <span class="nav__sub-title">Python/CV_Papers/Projects</span>
+        <span class="nav__sub-title">공부기록</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
@@ -27,7 +28,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "CV_Papers" %}
-                        <li><a href="/CV_Papers" class="">CV_Papers ({{category[1].size}})</a></li>
+                        <li><a href="/CV_Papers" class="">CV_Papers review ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -38,14 +39,25 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <!-- <span class="nav__sub-title">ETC</span>
+
+
+        <span class="nav__sub-title">Kaggle 기록</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "etc" %}
-                        <li><a href="/categories/etc" class="">잡담 ({{category[1].size}})</a></li>
+                    {% if category[0] == "kaggle_UBC_OC" %}
+                        <li><a href="/kaggle_UBC_OC" class="">kaggle_UBC_OC ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul> -->
+            </ul>
+
+        <span class="nav__sub-title">ETC</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "etc_post" %}
+                        <li><a href="/etc_post" class="">잡담 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
       </li>
   </ul>
