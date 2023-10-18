@@ -1,5 +1,5 @@
 ---
-title:  "사이드바(SideBar) 카테고리 만들기 - Projects category"
+title:  "Project category test post"
 categories:
   - Projects
 toc: true
@@ -8,4 +8,4 @@ tock_label: "TOC-TEST"
 typora-root-url: ../
 ---
 
-파이썬 카테고리 테스트
+Project category test.

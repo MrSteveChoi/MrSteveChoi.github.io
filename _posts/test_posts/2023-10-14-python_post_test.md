@@ -1,5 +1,5 @@
 ---
-title:  "사이드바(SideBar) 카테고리 만들기 - python category"
+title:  "Python category test"
 categories:
   - Python
 toc: true
@@ -8,7 +8,7 @@ tock_label: "TOC-TEST"
 typora-root-url: ../
 ---
 
-# test_test
+# test
 파이썬 카테고리 테스트 - python category
 왜 이렇게 오류가나냐...
 
