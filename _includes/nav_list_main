@@ -41,7 +41,7 @@
             </ul>
 
 
-        <span class="nav__sub-title">Kaggle 기록</span>
+        <span class="nav__sub-title">AI대회 기록</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "kaggle_UBC_OC" %}
@@ -49,6 +49,14 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "AIFactory_fish" %}
+                        <li><a href="/AIFactory_fish" class="">AIFactory Fish ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
 
         <span class="nav__sub-title">ETC</span>
             <ul>
