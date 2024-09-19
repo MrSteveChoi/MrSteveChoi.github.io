@@ -1,5 +1,5 @@
 ---
-title: "AIFactory Fish Classification Temp"
+title: "2024-09-18-leetcodDay1"
 categories:
   - AIFactory_fish
 toc: true
@@ -10,7 +10,7 @@ typora-root-url: ../
 
 
 
-# Leetcode Top Interview 150 - 24.09.19
+# Leetcode Top Interview 150 - 24.09.18
 
 ### 88. Merge Sorted Array
 

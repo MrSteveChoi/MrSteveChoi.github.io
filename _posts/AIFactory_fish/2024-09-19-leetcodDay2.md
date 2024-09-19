@@ -1,0 +1,53 @@
+---
+title: "2024-09-19-leetcodDay2"
+categories:
+  - AIFactory_fish
+toc: true
+toc_sticky: true
+tock_label: "List"
+typora-root-url: ../
+---
+
+
+
+# Leetcode Top Interview 150 - 24.09.19
+
+### 27.Remove Element
+
+![image-20240920035942976](/../assets/images/2024-09-19-leetcodDay2/image-20240920035942976.png)
+
+- **내 풀이**
+
+```python
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        while val in nums:
+            nums.remove(val)
+        answer = len(nums)
+        return answer
+```
+
+
+
+이번 문제도 어제 푼 문제와 마찬가지로 nums list 자체를 수정하여 해당 list안에 val과 같은 요소를 모두 제거해야 하는 문제이다. 이번 문제도 easy인 만큼 바로 생각나는대로 코드를 작성하였다.
+
+while loop을 돌며 nums list 안에 val이 하나도 없을 때 까지 반복하여 list.remove()를 통해 제거한 후 val과 같은 모든 요소가 사라진 list의 len을 return하는 방식으로 간단하게 해결하였다.
+
+하지만 제출 후 GPT에게 내 코드의 평가를 부탁하였는데, while loop을 돌며 nums.remove()를 할 때마다 val이 제거된 새로운 list를 반복적으로 만들어야 해서 비효율적인 코드라는 평가를 받았다.
+
+
+
+- **다른 풀이**
+
+```python
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        return k
+```
+
+따라서 list.remove() method를 사용하지 않고 nums list의 요소를 for loop을 통해 하나씩 순회하며 val과 같지 않은 요소들을 앞으로 한 칸씩 몰아주는 동시에 몇 개의 요소가 val과 같지 않은지를 k를 통해 카운트 하였다.
