@@ -1,0 +1,46 @@
+---
+title: "2024-09-20-leetcodDay3"
+categories:
+  - Coding_Test
+toc: true
+toc_sticky: true
+tock_label: "List"
+typora-root-url: ../
+---
+
+
+
+# Leetcode Top Interview 150 - 24.09.20
+
+### [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+
+![image-20240921025500056](/../assets/images/2024-09-20-leetcodDay3/image-20240921025500056.png)
+
+- **내 풀이**
+
+```python
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        duplicate_checker = [nums[0]] # nums의 첫 번째 요소를 넣은 중복확인용 list
+        change_index = 1 # unique한 값을 찾으면 해당 값과 바꿀 위치의 index info
+
+        for i in range(1, len(nums)): # nums list를 1번 index부터 끝까지 순회
+            if nums[i] == duplicate_checker[-1]: # i번째 nums list가 현재 확인중인 값과 같은경우
+                continue # for loop을 skip하고 다음으로 넘어감
+            else: # i번째 nums list가 현재 확인중인 값과 다른 경우(unique value)
+                duplicate_checker.append(nums[i]) # 해당 index에 해당하는 값을 duplicate_checker에 append
+                nums[change_index] = nums[i] # 바꿀 index에 해당하는 요소와 현재 확인중인 요소를 바꿈.
+                change_index += 1 # 바꿀 위치의 index에 1을 더함
+                    
+        k = len(duplicate_checker) # nums list의 unique value의 수를 k로 return
+
+        return k
+```
+
+
+
+이번 문제 역시 nums list 자체를 수정해야 하는 문제다.
+
+nums list의 첫 번째 요소를 시작으로 모든 list를 순회하며  전체 list를 확인하며 중복값일경우 지나가고 unique한 값이 나올 때마다 정해진 index번호의 요소와 자리를 바꾸는걸 반복하는 방법으로 간단하게 해결하였다.
+
+**\# Time Complexity  : O(N)**

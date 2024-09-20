@@ -1,7 +1,7 @@
 ---
 title: "2024-09-18-leetcodDay1"
 categories:
-  - AIFactory_fish
+  - Coding_Test
 toc: true
 toc_sticky: true
 tock_label: "List"

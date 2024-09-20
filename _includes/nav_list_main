@@ -27,6 +27,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Coding_Test" %}
+                        <li><a href="/Coding_Test" class="">Coding Test Study ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "CV_Papers" %}
                         <li><a href="/CV_Papers" class="">CV Papers review ({{category[1].size}})</a></li>
                     {% endif %}
