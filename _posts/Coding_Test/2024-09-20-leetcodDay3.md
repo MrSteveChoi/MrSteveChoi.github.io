@@ -43,4 +43,4 @@ class Solution:
 
 nums list의 첫 번째 요소를 시작으로 모든 list를 순회하며  전체 list를 확인하며 중복값일경우 지나가고 unique한 값이 나올 때마다 정해진 index번호의 요소와 자리를 바꾸는걸 반복하는 방법으로 간단하게 해결하였다.
 
-**\# Time Complexity  : O(N)**
+**\# Time Complexity  : $$O(N)$$**

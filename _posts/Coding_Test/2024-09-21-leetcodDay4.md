@@ -14,18 +14,66 @@ typora-root-url: ../
 
 ### [169. Majority Element](https://leetcode.com/problems/majority-element/)
 
-
+![image-20240923032349151](/../assets/images/2024-09-21-leetcodDay4/image-20240923032349151.png)
 
 - **내 풀이**
 
 ```python
+# 처음 풀이 - collections.Counter() 사용
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        from collections import Counter
+        
+        nums = Counter(nums)
+        nums = sorted(nums.items(), key=lambda x: x[1])
+        answer = nums[-1][0]
 
+        return answer
+
+# 두 번째 풀이 - 중앙값
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        nums.sort()
+        return nums[len(nums)//2]
 ```
 
 $$
 NlogN
 $$
 
-이
+이번 문제는 주어진 array에 존재하는 요소들 중 가장 많이 존재하는 요소를 찾는 문제이다.
 
-**\# Time Complexity  : O($$NlogN$$)**
+문제를 보고 바로 떠오른 방법은 Counter를 사용한 요소의 수 확인이였다. 풀이가 너무 간단해서 코드에 따로 주석을 달지는 않았는데, Counter를 이용해 각 요소가 몇 개씩 들어있는지를 판단한 후 value값을 기준으로 정렬하여 가장 많이 존재하는 요소를 찾는 방법으로 코드를 작성하였다.
+
+첫 풀이로 제출하고 나서 생각을 해 보니 좀 더 간단하게 풀 수 있을것 같아서 다시 풀어보았다.
+
+두 번째 방법은 문제의 "가장 수가 많은 요소는 무조건 n/2 이상이다"라는 조건을 이용해 nums list를 정렬한 후 중앙값을 return하는 방법을 사용하였다. 
+
+**\# Time Complexity  : $$O(NlogN)$$** *파이썬의 sort()는 $$O(NlogN)$$을 보장한다!*
+
+![image-20240923033258154](/../assets/images/2024-09-21-leetcodDay4/image-20240923033258154.png)
+
+이렇게 코드를 제출하였는데, 생각보다 속도가 빠르지 않았다... ㅠㅠ
+
+도대체 어떻게 코드를 짰길래 저렇게 빠른지 궁금해서 코드를 확인해 보았는데 아래와 같은 방법을 사용하였다.
+
+```python
+# 빠른 풀이
+f = open("user.out", 'w') # "user.out"이라는 파일을 write 상태로 만들어서 열어둠.
+for line in stdin: 		  # stdin은 leetcode에서 문제의 input을 담고있는 변수명인듯. 
+    
+    # 문제의 input을 line으로 받아와(string) 전처리 후 list로 변환한 후 정렬
+    l = sorted(map(int, line.rstrip()[1:-1].split(','))) 
+    
+    # 정렬된 list에서 중앙값을 stdout이 아닌 위에서 열어둔 "user.out"파일에 작성.
+    print(l[len(l) // 2], file=f)       
+```
+
+내 코드보다 빠른 이유를 생각해 본다면..
+
+1. class / function call을 할 필요가 없음.
+2. print를 stdout으로 출력할 필요 없이 user.out파일에 바로 씀.
+
+이 두 가지 이유 때문에 속도가 빠른것 같은데, "user.out"이라는 파일에 담겨있는 값이 채점에 사용된다는 점과 "stdin"이라는 변수에 문제의 input값이 들어있다는 leetcode의 특징을 활용한 것 같다. 
+
+내가 직접 코테를 볼 때 고려해야 할 부분은 아닌것 같아서 간단하게 이해만 하고 넘어가는걸로~
