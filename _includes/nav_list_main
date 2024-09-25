@@ -28,7 +28,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "leetcode_150" %}
-                        <li><a href="/leetcode_150" class="">Leetcode Top Interview 150({{category[1].size}})</a></li>
+                        <li><a href="/leetcode_150" class="">Leetcode Top Interview 150 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
