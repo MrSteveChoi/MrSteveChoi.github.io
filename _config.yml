@@ -104,11 +104,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Steve Choi"
-  avatar           : "/assets/images/rabbit.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "비전공자 출신 개발자 블로그."
-  location         : "South Korea, Ilsan"
-  email            :
+  name: "Steve Choi"
+  avatar: "/assets/images/rabbit.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio: "비전공자 출신 개발자 블로그."
+  location: "South Korea, Ilsan"
+  email:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -220,10 +220,15 @@ sass:
 
 
 # Outputting
+# 메인에 최근 post 관련 설정
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 8 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# 포스팅 날짜 무시하고 업로드 설정
+# _config.yml에서 future: true 설정 후 페이지 옵션(타이틀, 카테고리 적는 곳)에 published: true 추가
+future: true
 
 
 # Plugins (previously gems:)
