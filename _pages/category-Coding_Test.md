@@ -4,7 +4,7 @@ layout: archive
 permalink: /leetcode_150
 author_profile: true
 sidebar_main: true
-published: true
+# published: true # 미래시간 포스팅 설정옵션
 ---
 
 

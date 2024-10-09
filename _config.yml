@@ -226,11 +226,6 @@ paginate: 8 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# 포스팅 날짜 무시하고 업로드 설정
-# _config.yml에서 future: true 설정 후 페이지 옵션(타이틀, 카테고리 적는 곳)에 published: true 추가
-future: true
-
-
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
@@ -302,3 +297,7 @@ defaults:
       # sidebar: # add_part
         # nav: "sidebar-category" # add_part
       sidebar_main: true
+
+# 포스팅 날짜 무시하고 업로드 설정
+# _config.yml에서 future: true 설정 후 페이지 옵션(타이틀, 카테고리 적는 곳)에 published: true 추가
+# future: true
